@@ -1,0 +1,129 @@
+{
+  "version": "1",
+  "title": "R数据挖掘",
+  "author": "admin",
+  "description": "R语言分类预测基本流程实验 R语言数据预处理实验 R语言决策树分类方法实验 R语言高级分类方法实验 R语言聚类分析实验 R语言关联分析实验 R语言回归分析实验 研究报告 聚类分析 分类与预测：决策树 关联分析：Apriori算法 ",
+  "scenarios": [
+    {
+      "title": "实验一：R语言分类预测基本流程实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验一：R语言分类预测基本流程实验",
+          "text": "scenarios/实验一：R语言分类预测基本流程实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验二：R语言数据预处理实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验二：R语言数据预处理实验",
+          "text": "scenarios/实验二：R语言数据预处理实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验三：R语言决策树分类方法实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验三：R语言决策树分类方法实验",
+          "text": "scenarios/实验三：R语言决策树分类方法实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验四：R语言高级分类方法实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验四：R语言高级分类方法实验",
+          "text": "scenarios/实验四：R语言高级分类方法实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验五：R语言聚类分析实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验五：R语言聚类分析实验",
+          "text": "scenarios/实验五：R语言聚类分析实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验六：R语言关联分析实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验六：R语言关联分析实验",
+          "text": "scenarios/实验六：R语言关联分析实验.md"
+        }
+      ]
+    },
+    {
+      "title": "实验七：R语言回归分析实验",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "实验七：R语言回归分析实验",
+          "text": "scenarios/实验七：R语言回归分析实验.md"
+        }
+      ]
+    },
+    {
+      "title": "考试方式",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "考试方式",
+          "text": "scenarios/考试方式.md"
+        }
+      ]
+    },
+    {
+      "title": "作业5",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "作业5",
+          "text": "scenarios/作业5.md"
+        }
+      ]
+    },
+    {
+      "title": "作业4",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "作业4",
+          "text": "scenarios/作业4.md"
+        }
+      ]
+    },
+    {
+      "title": "作业7",
+      "environment": "registry.cn-shanghai.aliyuncs.com/kfcoding/kfcoding-envs:cloudware-rstudio",
+      "steps": [
+        {
+          "preload": "scripts/pre.sh",
+          "title": "作业7",
+          "text": "scenarios/作业7.md"
+        }
+      ]
+    }
+  ]
+}
