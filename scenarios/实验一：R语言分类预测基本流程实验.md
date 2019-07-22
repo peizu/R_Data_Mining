@@ -289,4 +289,4 @@ virginica       0          2        18
 > pairs(iris.valid[1:4], pch = pcol, col = c("green3", "red")[(iris.valid$Species != fit)+1])
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-1-1_20171107090129.029.jpeg)
+![](/images/2-2-1-1_20171107090129.029.jpeg)
