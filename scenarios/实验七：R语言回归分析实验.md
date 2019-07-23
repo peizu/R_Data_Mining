@@ -180,3 +180,6 @@ F-statistic:  1882 on 1 and 148 DF,  p-value: < 2.2e-16
 > par(mfrow = c(2, 2))
 > plot(lm1)
 ```
+检验结果如下图：
+
+![](/images/2-2-7-5_20190723.png)
