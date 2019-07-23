@@ -350,6 +350,6 @@ function (x, opposite = FALSE, logical = FALSE)
 > points(32,outlier(y),pch=8)
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-2-1_20171107090353.053.jpg)
+![](/images/2-2-2-1_20171107090353.053.jpg)
 
 在进行噪声检查后，常用直接去除法、回归模型法、平均法等平滑数据，去除噪声数据
