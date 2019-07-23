@@ -169,6 +169,8 @@ function (x, opposite = FALSE, logical = FALSE)
 
 ```
 > summary(nhanes2)
+
+#执行结果为：
     age          bmi          hyp          chl       
  20-39:12   Min.   :20.40   no  :13   Min.   :113.0  
  40-59: 7   1st Qu.:22.65   yes : 4   1st Qu.:185.0  
@@ -183,6 +185,8 @@ function (x, opposite = FALSE, logical = FALSE)
 
 ```
 > sum(is.na(nhanes2))
+
+#执行结果为：
 [1] 27
 ```
 
@@ -190,6 +194,8 @@ function (x, opposite = FALSE, logical = FALSE)
 
 ```
 > sum(complete.cases(nhanes2))
+
+#执行结果为：
 [1] 13
 ```
 
@@ -197,6 +203,8 @@ function (x, opposite = FALSE, logical = FALSE)
 
 ```
 > md.pattern(nhanes2)
+
+#执行结果为：
    age hyp bmi chl   
 13   1   1   1   1  0
  1   1   1   0   1  1
@@ -224,16 +232,16 @@ function (x, opposite = FALSE, logical = FALSE)
 > dataTE[,4] =sample(dataTR[,4],length(dataTE[,4]),replace=T)
 > dataTE
      age  bmi  hyp chl
-1  20-39   NA <NA> 118
-4  60-99   NA <NA> 131
+1  20-39   NA <NA> 187
+4  60-99   NA <NA> 199
 10 40-59   NA <NA> 187
-11 20-39   NA <NA> 187
-12 40-59   NA <NA> 187
-15 20-39 29.6   no 187
-16 20-39   NA <NA> 199
-20 60-99 25.5  yes 187
-21 20-39   NA <NA> 284
-24 60-99 24.9   no 229
+11 20-39   NA <NA> 113
+12 40-59   NA <NA> 204
+15 20-39 29.6   no 284
+16 20-39   NA <NA> 284
+20 60-99 25.5  yes 238
+21 20-39   NA <NA> 187
+24 60-99 24.9   no 186
 ```
 
 均值法通过计算缺失值所在变量所有非缺失值的均值来代替缺失值，该方法不会减少信息并且处理简单，但是当缺失值不是随机产生时会产生偏差，下面展示如何用均值法填补缺失值，首先新建列表sub记录nhanes2数据集中第四列为缺失值的行数
@@ -295,14 +303,22 @@ function (x, opposite = FALSE, logical = FALSE)
 
 ```
 > accept[2,]
+
+#执行结果为：
     age bmi hyp chl
 3 20-39  NA  no 187
+
 > sa =donate[which(donate[,1]==accept[2,1]&donate[,3]==accept[2,3]&donate[,4]==accept[2,4]),]
 > sa
+
+#执行结果为：
     age  bmi hyp chl
 8 20-39 30.1  no 187
+
 > accept[2,2]=sa[1,2]
 > accept[2,]
+
+#执行结果为：
     age  bmi hyp chl
 3 20-39 30.1  no 187
 ```
@@ -314,6 +330,8 @@ function (x, opposite = FALSE, logical = FALSE)
 ```
 > level1 <- nhanes2[which(nhanes2[,3]=="yes"),]
 > level1
+
+#执行结果为：
      age  bmi hyp chl
 14 40-59 28.7 yes 204
 17 60-99 27.2 yes 284
@@ -326,6 +344,8 @@ function (x, opposite = FALSE, logical = FALSE)
 ```
 > level1[4,4] =mean(level1[1:3,4])
 > level1
+
+#执行结果为：
      age  bmi hyp chl
 14 40-59 28.7 yes 204
 17 60-99 27.2 yes 284
@@ -343,9 +363,15 @@ function (x, opposite = FALSE, logical = FALSE)
 > library(outliers)
 > y=rnorm(100)
 > outlier(y)
-[1] -2.888921
+
+#执行结果为：
+[1] 2.545592
+
 > which(y==outlier(y),arr.ind = TRUE)
-[1] 32
+
+#执行结果为：
+[1] 10
+
 > plot(y)
 > points(32,outlier(y),pch=8)
 ```
