@@ -166,4 +166,4 @@ Available components:
 > points(kmeans.result$centers[,c("Sepal.Length","Sepal.Width")],col=1:3,pch=8,cex=2)
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-5-1_20171107091014.014.jpeg)
+![](/images/2-2-5-1_20171107091014.014.jpeg)
