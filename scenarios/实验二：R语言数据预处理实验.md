@@ -231,6 +231,8 @@ function (x, opposite = FALSE, logical = FALSE)
 > dataTE =nhanes2[sub,]
 > dataTE[,4] =sample(dataTR[,4],length(dataTE[,4]),replace=T)
 > dataTE
+
+#执行结果为：
      age  bmi  hyp chl
 1  20-39   NA <NA> 187
 4  60-99   NA <NA> 199
@@ -257,6 +259,8 @@ function (x, opposite = FALSE, logical = FALSE)
 > dataTE =nhanes2[sub,]
 > dataTE[,4] = mean(dataTR[,4])
 > dataTE
+
+#执行结果为：
      age  bmi  hyp   chl
 1  20-39   NA <NA> 191.4
 4  60-99   NA <NA> 191.4
@@ -279,6 +283,8 @@ function (x, opposite = FALSE, logical = FALSE)
 > lm <- lm(chl~age,data=dataTR)
 > dataTE[,4] = round(predict(lm,dataTE))
 > dataTE
+
+#执行结果为：
      age  bmi  hyp chl
 1  20-39   NA <NA> 169
 4  60-99   NA <NA> 225
