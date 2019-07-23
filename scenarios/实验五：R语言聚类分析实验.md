@@ -137,10 +137,12 @@ function (x, centers, iter.max = 10L, nstart = 1L, algorithm = c("Hartigan-Wong"
 > iris1$Species <- NULL
 ```
 
-对iris1数据集调用函数kmeans\(\)，并将结果存储在变量kmeans.result中，在命令外面加小括号可以直接查看函数调用结果
+对iris1数据集调用函数kmeans\(\)，并将结果存储在变量kmeans.result中，在命令外面加小括号可以直接查看函数调用结果。**每次操作输出结果困难不同，相应的，后面画出的散点图也会不同**
 
 ```
 > (kmeans.result <- kmeans(iris1,3))
+
+#输出结果为：
 K-means clustering with 3 clusters of sizes 33, 21, 96
 Cluster means:
   Sepal.Length Sepal.Width Petal.Length Petal.Width
