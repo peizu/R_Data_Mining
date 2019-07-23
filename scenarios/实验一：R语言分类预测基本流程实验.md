@@ -213,6 +213,9 @@ function (formula = formula(train), train, test, na.action = na.omit(),
 ```
 > iris.kknn <- kknn(Species~., iris.learn, iris.valid, distance = 1, kernel = "triangular")
 > summary(iris.kknn)
+
+#输出结果为：
+#输出结果每次不同
 Call:
 kknn(formula = Species ~ ., train = iris.learn, test = iris.valid,     distance = 1, kernel = "triangular")
 
@@ -275,6 +278,8 @@ Response: "nominal"
 ```
 > fit <- fitted(iris.kknn)
 > table(iris.valid$Species, fit)
+
+#输出结果为：
              fit
              setosa versicolor virginica
 setosa         14          0         0
