@@ -173,6 +173,8 @@ function (object, controls, weights = NULL, ...)
 
 ```
 > table(predict(iris_ctree,trainData),trainData$Species)
+
+#执行结果为：
            setosa versicolor virginica
 setosa         40          0         0
 versicolor      0         37         3
@@ -187,13 +189,14 @@ virginica       0          1        31
 > plot(iris_ctree,type="simple")
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/Rplot_20180409022530.030.png)
+![](/images/Rplot_20180409022530.030.png)
 接下来查看决策树模型在测试集上的预测效果
 
 ```
 > testPred <- predict(iris_ctree,newdata=testData)
 > table(testPred,testData$Species)
 
+#执行结果为：
 testPred     setosa versicolor virginica
 setosa         10          0         0
 versicolor      0         12         2
