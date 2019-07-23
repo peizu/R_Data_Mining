@@ -982,7 +982,7 @@ predict.batch <- function (object, file.rds, decision.values = TRUE, probability
 > xyplot(Petal.Length ~ Petal.Width, data = iris, groups = Species,  auto.key=list(corner=c(1,0)))
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-4-1_20171107090711.011.jpeg)
+![](/images/2-2-4-1_20171107090711.011.jpeg)
 
 调用svm函数并观察分类后的超平面
 
@@ -991,4 +991,4 @@ predict.batch <- function (object, file.rds, decision.values = TRUE, probability
 > plot(svm_model,iris,Petal.Length~Petal.Width)
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-4-2_20171107090804.004.jpeg)
+![](/images/2-2-4-2_20171107090804.004.jpeg)
