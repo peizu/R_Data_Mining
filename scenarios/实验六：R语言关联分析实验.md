@@ -6,7 +6,7 @@
 
 关联规则是表示两个项集之间的关联度或相关性的规则，关联规则的形式为下式：
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-6-1_20171107091219.019.png)
+![](/images/2-2-6-1_20171107091219.019.png)
 
 其中A 与 B是两个互斥的项集，分别位于规则的左侧和右侧。
 
@@ -79,8 +79,13 @@ function (data, parameter = NULL, appearance = NULL, control = NULL)
 
 ```
 > dim(titanic.raw)
+
+#输出结果为：
 [1] 2201    4
+
 > summary(titanic.raw)
+
+#输出结果为：
     Class           Sex          Age   Survived  
  1st :325   Female: 470   Adult:2092   No :1490  
  2nd :285   Male  :1731   Child: 109   Yes: 711  
@@ -96,19 +101,21 @@ function (data, parameter = NULL, appearance = NULL, control = NULL)
 > quality(rules) <- round(quality(rules),digits=3)
 > rules.sorted <- sort(rules,by="lift")
 > inspect(rules.sorted)
-     lhs                                  rhs            support confidence lift 
-[1]  {Class=2nd,Age=Child}             => {Survived=Yes} 0.011   1.000      3.096
-[2]  {Class=2nd,Sex=Female,Age=Child}  => {Survived=Yes} 0.006   1.000      3.096
-[3]  {Class=1st,Sex=Female}            => {Survived=Yes} 0.064   0.972      3.010
-[4]  {Class=1st,Sex=Female,Age=Adult}  => {Survived=Yes} 0.064   0.972      3.010
-[5]  {Class=2nd,Sex=Female}            => {Survived=Yes} 0.042   0.877      2.716
-[6]  {Class=Crew,Sex=Female}           => {Survived=Yes} 0.009   0.870      2.692
-[7]  {Class=Crew,Sex=Female,Age=Adult} => {Survived=Yes} 0.009   0.870      2.692
-[8]  {Class=2nd,Sex=Female,Age=Adult}  => {Survived=Yes} 0.036   0.860      2.663
-[9]  {Class=2nd,Sex=Male,Age=Adult}    => {Survived=No}  0.070   0.917      1.354
-[10] {Class=2nd,Sex=Male}              => {Survived=No}  0.070   0.860      1.271
-[11] {Class=3rd,Sex=Male,Age=Adult}    => {Survived=No}  0.176   0.838      1.237
-[12] {Class=3rd,Sex=Male}              => {Survived=No}  0.192   0.827      1.222
+
+#输出结果为：
+     lhs                                  rhs            support confidence lift    count    
+[1]  {Class=2nd,Age=Child}             => {Survived=Yes} 0.011   1.000      3.096   24
+[2]  {Class=2nd,Sex=Female,Age=Child}  => {Survived=Yes} 0.006   1.000      3.096   13
+[3]  {Class=1st,Sex=Female}            => {Survived=Yes} 0.064   0.972      3.010   141
+[4]  {Class=1st,Sex=Female,Age=Adult}  => {Survived=Yes} 0.064   0.972      3.010   140
+[5]  {Class=2nd,Sex=Female}            => {Survived=Yes} 0.042   0.877      2.716   93
+[6]  {Class=Crew,Sex=Female}           => {Survived=Yes} 0.009   0.870      2.692   20
+[7]  {Class=Crew,Sex=Female,Age=Adult} => {Survived=Yes} 0.009   0.870      2.692   20
+[8]  {Class=2nd,Sex=Female,Age=Adult}  => {Survived=Yes} 0.036   0.860      2.663   80
+[9]  {Class=2nd,Sex=Male,Age=Adult}    => {Survived=No}  0.070   0.917      1.354   154
+[10] {Class=2nd,Sex=Male}              => {Survived=No}  0.070   0.860      1.271   154
+[11] {Class=3rd,Sex=Male,Age=Adult}    => {Survived=No}  0.176   0.838      1.237   387
+[12] {Class=3rd,Sex=Male}              => {Survived=No}  0.192   0.827      1.222   422
 ```
 
 可视化查看关联规则结果
@@ -118,4 +125,4 @@ function (data, parameter = NULL, appearance = NULL, control = NULL)
 > plot(rules,method="graph")
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-6-2_20171107091747.047.jpeg)
+![](/images/2-2-6-2_20171107091747.047.jpeg)
