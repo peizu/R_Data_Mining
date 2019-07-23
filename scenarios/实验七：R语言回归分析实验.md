@@ -10,7 +10,7 @@
 
 线性回归可以根据给定的预测变量来预测目标变量的值。线性回归使用最佳的拟合直线（也就是回归线）在因变量\(Y\)和一个或多个自变量\(X\)之间建立一种关系。一元线性回归方程可以表示为下式：
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-7-1_20171107092007.007.png)
+![](/images/2-2-7-1_20171107092007.007.png)
 
 # 算法源码
 ```
@@ -91,6 +91,8 @@ function (formula, data, subset, weights, na.action, method = "qr",
 ```
 > attach(iris)
 > str(iris)
+
+#输出结果为：
 'data.frame':    150 obs. of  5 variables:
 $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
 $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
@@ -103,6 +105,8 @@ $ Species      : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 
 
 ```
 > summary(iris)
+
+#输出结果为：
 Sepal.Length    Sepal.Width     Petal.Length    Petal.Width     Species  
 Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
@@ -118,7 +122,7 @@ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500
 > pairs(iris[, 1:4], col = "blue")
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-7-2_20171107092147.047.jpg)
+![](/images/2-2-7-2_20171107092147.047.jpg)
 
 从上图可以看出，Petal.Length与Petal.Width存在明显的正相关性，接下来选择这组变量建立回归模型。
 
@@ -126,6 +130,8 @@ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500
 
 ```
 > (lm1 <- lm(Petal.Length ~ Petal.Width))
+
+#输出结果为：
 Call:
 lm(formula = Petal.Length ~ Petal.Width)
 Coefficients:
@@ -135,12 +141,14 @@ Coefficients:
 
 由以上给出的系数可以得到拟合的回归方程为下式，其中y代表Petal.Length，x代表Petal.Width
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-7-3_20171107092241.041.png)
+![](/images/2-2-7-3_20171107092241.041.png)
 
 查看回归结果
 
 ```
 > summary(lm1)
+
+#输出结果为：
 Call:
 lm(formula = Petal.Length ~ Petal.Width)
 Residuals:
@@ -164,7 +172,7 @@ F-statistic:  1882 on 1 and 148 DF,  p-value: < 2.2e-16
 > lines(Petal.Width, lm1$fitted.values)
 ```
 
-![](https://kfcoding-static.oss-cn-hangzhou.aliyuncs.com/gitcourse-bigdata/2-2-7-4_20171107092357.057.jpg)
+![](/images/2-2-7-4_20171107092357.057.jpg)
 
 对拟合的模型进行残差检验
 
